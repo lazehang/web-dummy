@@ -142,7 +142,7 @@ ul.top_icons li a:hover {
     margin: 47px 0 0 0;
     right: 8%;
     top: 0;
-    z-index: 9999;
+    z-index: 120;
     cursor: pointer;
     width: 36px;
     height: 36px;
