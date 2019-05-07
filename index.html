@@ -1002,10 +1002,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 
 		undone.addEventListener('addToCart', function(data) {
-			// e.preventDefault()
 			console.log(data.value)
-			// undone.toggle()
-			var undone_cart_form = document.getElementById('undoneproductform');
+			var undone_cart_form = document.querySelector('#undoneproductform');
+
+			undone_cart_form.querySelector("input[name='shoe_item']").setAttribute('value', data.value.title)
+			undone_cart_form.querySelector("input[name='amount']").setAttribute('value', data.value.price)
+
 			undone_cart_form.querySelector('button').click();
 		})
 
