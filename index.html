@@ -291,6 +291,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- //reviews -->
 				<!-- deals -->
 				<div id="undoneCustomizer12"></div>
+				<div id="aquaUndone"></div>
 				<div class="deal-leftmk left-side">
 					<h3 class="agileits-sear-head">Special Deals</h3>
 					<div class="special-sec1">
@@ -568,14 +569,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<img src="images/watch/watch6.jpg" alt="">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="#" onclick="openAquaCustomizer()" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 									</div>
 									<div class="item-info-product">
 										<h4>
-											<a href="single.html">Nixon </a>
+											<a href="#" onclick="openAquaCustomizer()">Aqua </a>
 										</h4>
 										<div class="info-product-price">
 											<div class="grid_meta">
@@ -618,14 +619,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<img src="https://www.undone.com/api/previewImage/209-274-217-206-225-243-247/300-300" alt="">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="#" onclick="openCustomizer()" class="link-product-add-cart">Quick View</a>
+												<a href="#" onclick="openUrbanCustomizer()" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 									</div>
 									<div class="item-info-product">
 										<h4>
-											<a href="#" onclick="openCustomizer()">Undone </a>
+											<a href="#" onclick="openUrbanCustomizer()">Undone </a>
 										</h4>
 										<div class="info-product-price">
 											<div class="grid_meta">
@@ -937,6 +938,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- //cart-js -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 	<!-- /nav -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/classie.js"></script>
@@ -981,18 +983,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			
 		});
-		window.fbId=2248426628723460
+		window.fbId="2248426628723460"
 	</script>
 
-	<script src="js/undone/dist/app.js"></script>
-	<!-- <script src="node_modules/dummy-undone/dist/app.js"></script> -->
+	<script src="node_modules/undone-customizer/dist/undone.js"></script>
+	<!-- <script src="https://api.undone.com/undone-customizer/dist/undone.js"></script> -->
+	
+	<!-- <script src="../new_dummy/dist/undone.js"></script> -->
 	<script>
 		var undone = document.querySelector("#undoneCustomizer12").undone({
-			watchType: 'urban-vintage'
+			watchType: 'urban-vintage',
+			data: '208-274-228-208-197-243-247',
+			currencyText: 'HKD'
 		})
 
-		function openCustomizer() {
-			undone.open()
+		function openUrbanCustomizer() {
+			undone.toggle()
 		}
 
 		undone.addEventListener('addToCart', function(data) {
